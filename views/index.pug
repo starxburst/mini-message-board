@@ -1,0 +1,13 @@
+extends layout
+
+
+
+block content
+  h1= title
+  a(href="/form")='New Message' 
+
+  div(class='container'): each message in messages
+       div: h1= message.text
+            h3= message.user
+            p= message.added.toDateString()
+            hr
